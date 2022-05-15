@@ -4,8 +4,18 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./metadata.js"></script>
     <!-- if you need to import additional js scripts do it here -->
+    <style>
+      body {
+        margin: 15px;
+      }
+    </style>
   </head>
   <body>
+    <p><b>Reload page</b> for a new one!</p>
+    <p>This script samples an image from a conditional 4-class 128x128 <a href="https://arxiv.org/abs/1511.06434">DCGAN (deep convolutional generative adversarial network</a> trained on a dataset of human, dog, cat, and wilflife faces.</p>
+    <p>Inference on the model uses <a href="https://www.tensorflow.org/js">Tensorflow.js</a>, entirely client-side. The model itself is ~7.8 MB and is downloaded by the client from this webserver, but could be relocated to IPFS.</p>
+    <p>The model takes in a random 100-dimensional vector (generated using nilRandom()) and a single class label (e.g. 'person', 'dog', 'cat', 'wild') and deterministically outputs the face at that point in the model's <a href="https://en.wikipedia.org/wiki/Latent_space">latent space</a>.</p>      
+    <p>If the code and model are hosted in a decentralized way (e.g. on-chain and/or on IPFS), immutability and reproducibility are ensured, as the model will always generate the same face given the same input vector. In a sense, you own a point in the latent space.</p>
     <!-- WEBPACK will inject the bundle.js here -->
   </body>
 </html>
